@@ -1,0 +1,162 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+   box-sizing: border-box;
+   margin:0;
+   padding:0;
+   font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: 
+    linear-gradient( to right, rgb(145, 145, 161) , rgb(120, 120, 192) ) ;
+}
+
+.cont{
+   
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    width:768px;
+    max-width: 100%; 
+    min-height: 480px;
+    position: relative;
+    transition:all .6s ease-in-out;
+}
+
+h1 {
+    font-size: 25px;
+}
+i{
+    font-size: 20px;
+    padding:8px;
+    border:solid rgb(223, 222, 222) 1px;
+    margin-top:10px;
+    
+}
+span{
+    font-size: 11px;
+    line-height: 20px;
+    margin:10px 0;
+}
+button{
+    padding:10px 50px;
+    color:white;
+    background-color: rgb(109, 23, 190);
+    border-radius:8px;
+    cursor: pointer;
+    text-transform: uppercase;
+   letter-spacing: 1px;
+    border:1px solid transparent;
+    
+}
+.sign-up button{
+    margin-top:10px;
+}
+button.hidden {
+    background-color: transparent;
+    border-color:#eee;
+}
+a {
+    color:#333;
+    font-size: 13px;
+    margin:15px 0;
+    text-decoration: none;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding:0 40px;
+    z-index: -1;
+} 
+@media (max-width:768px){
+    .form{
+        padding:0 10px;
+    }
+}
+input {
+    width: 100%;
+    outline: none;
+    border:none;
+    background-color: #eee;
+    margin-bottom:10px;
+    padding:9px;
+    border-radius:8px;
+    font-size: 15px;
+}
+
+.form {
+    position: absolute;
+    top:0;
+   height:100%;
+   transition:all .6s ease-in-out;
+}
+.sign-in{
+    left:0;
+    width: 50%;
+    z-index: 100;
+}
+.sign-up{
+    right:0;
+    width:50%;
+    z-index: 100;
+}
+
+.toggle{
+    position: absolute;
+    top:0;
+    left:50%;
+    width: 50%;
+    height:100%;
+    z-index: 1000;
+    overflow: hidden;
+   display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    padding:0 10px;
+    text-align: center;
+    transition:all .6s ease-in-out;
+  
+    
+}
+.up{
+    background-color: blueviolet;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius:20%;
+   
+}
+.up.active{
+  transform: translateX(-200%);
+ opacity: 0;
+ 
+}
+.in{
+    background-color: blueviolet;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius:20%;
+    transform: translateX(50%);
+    opacity:0;
+   
+
+}
+.in.active{
+    /* display:flex; */
+    translate:-150% 0;
+    opacity:100%;
+}
+.toggle span{
+    font-size: 13px;
+    margin:20px;
+    
+}
